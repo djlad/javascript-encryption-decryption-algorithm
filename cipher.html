@@ -1,5 +1,7 @@
 <html>
 <script>
+
+function encrypt(key,text){
 alph = ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M','!','@','#','$','%','^','&','*','(',')','_','+','1','2','3','4','5','6','7','8','9',"0",'-','=',"q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m",",",".","/","?"," "]
 	//     0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29   30  31
 	
@@ -7,9 +9,9 @@ alph2 = ["`","~","<",">","|","/","\'","\"","\\","\[","\{","\}","\]",";",":"]
 
 alph = alph.concat(alph2)
 	
-key = prompt("key")
+//key = prompt("key")
 ikey = key
-text = prompt("text for encryption")
+//text = prompt("text for encryption")
 
 while(key.length < text.length){
 	key = key + ikey
@@ -34,9 +36,9 @@ for(c = 0; c <= text.length-1; c++){
 	
 	otext = otext + alph[nlpos]
 }
-console.log(otext)
-alert(otext)
-document.write(otext);
+return otext
+
+}
 </script>
 
 </html>
